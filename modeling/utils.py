@@ -1,5 +1,6 @@
 def Preprocessor(data, text):
     
+    import re
     from konlpy.tag import Mecab
     
     """ 불용어 리스트 불러오기 """
@@ -13,8 +14,8 @@ def Preprocessor(data, text):
     docs = []
     tokens_cnt= []
     for t in text:
-        tt = str(t).replace('[A-z]+', ' ') # 영어 제거
-        tokenized = mecab.morphs(tt) # 형태소 분석
+        t = re.sub('[\.!~A-z]+', '', str(t)) # 영어 및 특수문자 제거
+        tokenized = mecab.morphs(t) # 형태소 분석
         words = []
         for token in tokenized:
             if (len(token)>1) and (token not in stopwords): # 길이가 1인 단어 제거, 불용어 제거
