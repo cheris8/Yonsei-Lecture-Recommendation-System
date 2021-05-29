@@ -11,8 +11,8 @@
     |      |--- dataset.csv
     |--- modeling
     |      |--- KeywordExtraction.ipynb
-    |      |--- SentimentAnalysis.ipynb
+    |      |--- SentimentAnalysis_BERT_modeling.ipynb
+    |      |--- SentimentAnalysis_BERT_tutorial.ipynb
     |      |--- TopicModeling.ipynb
     |      |--- stopwordsFortopicmodeling.txt
-    |      |--- bert.pickle
     |      |--- utils.py
