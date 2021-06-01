@@ -13,8 +13,8 @@ def Preprocessor(data, text):
     """ 형태소 분석 수행하기 """
     docs = []
     tokens_cnt= []
-    for t in text:
-        t = re.sub('[\.!~A-z]+', '', str(t)) # 영어 및 특수문자 제거
+    for t in text: 
+        t = re.sub('[\.\->!~A-z]+', '', str(t)) # 영어 및 특수문자 제거
         tokenized = mecab.morphs(t) # 형태소 분석
         words = []
         for token in tokenized:
