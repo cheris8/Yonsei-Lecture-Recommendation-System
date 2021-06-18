@@ -42,7 +42,7 @@ def ModelingLDA(text_tokenized, N=20):
     corpus = [dictionary.doc2bow(doc) for doc in text_tokenized]
     
     """LDA 수행하기"""
-    lda = LdaModel(corpus, num_topics=N, id2word=dictionary, passes=50)
+    lda = LdaModel(corpus, num_topics=N, id2word=dictionary, passes=50, random_state=99)
     
     """LDA 결과 출력하기"""
     topics = lda.print_topics(num_words=5)
